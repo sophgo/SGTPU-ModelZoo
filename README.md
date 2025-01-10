@@ -92,6 +92,7 @@ git lfs pull --include="*" --exclude=""
 ### 模型转换
 
 利用shell脚本将对应的onnx文件转换为 INT8 格式的bmodel文件，具体操作是：
+
 打开具体模型所在的目录，比如 ```yolov5s```模型在 ```SGTPU-ModelZoo/vision/classification/yolov5s/```，利用转换文件转换 ```yolov5s.onnx``` 文件
 ```bash
 bash convert.sh
