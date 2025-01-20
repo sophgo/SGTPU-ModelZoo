@@ -17,7 +17,7 @@ run_calibration.py mobilenet_v2.mlir \
 model_deploy.py \
   --quantize int8 \
   --mlir mobilenet_v2.mlir \
-  --chip bm1684x \
+  --chip sgtpuv8 \
   --tolerance 0.95,0.69 \
   --debug \
   --test_input mobilenet_v2_in_f32.npz \

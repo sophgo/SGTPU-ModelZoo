@@ -20,7 +20,7 @@ run_calibration.py resnet50-v2-7.mlir \
 model_deploy.py \
   --quantize int8 \
   --mlir resnet50-v2-7.mlir \
-  --chip bm1684x \
+  --chip sgtpuv8 \
   --tolerance 0.92,0.60 \
   --compress_mode "all" \
   --debug \

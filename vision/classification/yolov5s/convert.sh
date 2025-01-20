@@ -20,7 +20,7 @@ run_calibration.py yolov5s.mlir \
 model_deploy.py \
   --quantize int8 \
   --mlir yolov5s.mlir \
-  --chip bm1684x \
+  --chip sgtpuv8 \
   --tolerance 0.92,0.61 \
   --debug \
   --test_input yolov5s_in_f32.npz \
