@@ -1,14 +1,15 @@
 # SGTPU-ModelZoo
 
-SGTPU-ModelZoo 是一个开源项目 xxxx
-
-## 简介
-该项目旨在帮助开发者 xxx
+## 目录
+- [安装指南](#安装指南)
+- [快速开始](#快速开始)
+- [目录结构](#目录结构)
+- [资料链接](#资料链接)
 
 
 ## 安装指南
 ### 1. 安装 tpu-mlir
-首先检查当前系统环境是否满足 ubuntu 22.04 和 python 3.10。如不满足，请进行下一节 [基础环境配置](#10-基础环境配置) ；如满足，直接跳至 [tpu_mlir 安装](#tpu_mlir-安装) 。
+首先检查当前系统环境是否满足 ubuntu 22.04 和 python 3.10。如不满足，请进行下一节 [基础环境配置](#10-基础环境配置) ；如满足，直接跳至 [tpu_mlir 安装](#11-tpu_mlir-安装) 。
 #### 1.0 基础环境配置
 如不满足上述系统环境，则需要使用Docker，从 DockerHub https://hub.docker.com/r/sophgo/tpuc_dev 下载所需的镜像文件，或使用下方命令直接拉取镜像：
 
@@ -37,41 +38,23 @@ $ docker run --privileged --name myname -v $PWD:/workspace -it sophgo/tpuc_dev:v
 
 此时假定用户已经处于 docker 里面的```/workspace```目录。
 
-#### 1.1 tpu_mlir 安装
+#### 1.1 tpu-mlir 安装
 
-目前支持2种安装方法，分别是 [__在线安装__](#在线安装) 和 [__离线安装__](#离线安装)。
-
-##### 在线安装
-
-直接从pypi下载并安装，默认安装最新版：
+克隆仓库
 ```bash
-$ pip install tpu_mlir
+git clone https://github.com/sophgo/tpu-mlir.git
 ```
-
-##### 离线安装
-
-从Github的 [Assets](https://github.com/sophgo/tpu-mlir/releases/) 处下载最新的 tpu_mlir-*-py3-none-any.whl，然后使用pip安装:
+源码编译
 ```bash
-$ pip install tpu_mlir-*-py3-none-any.whl
-```
-
-```NOTICE:``` tpu_mlir在对不同框架模型处理时所需的依赖不同，在线安装和离线安装方式都需要安装额外依赖。
-
-在线安装
-```bash
-# 安装onnx依赖
-$ pip install tpu_mlir[onnx]
-```
-
-离线安装
-
-```bash
-# 安装onnx依赖
-$ pip install tpu_mlir-*-py3-none-any.whl[onnx]
+cd tpu-mlir
+git checkout sgtpuv8
+source ./envsetup.sh
+./build.sh
 ```
 
 
-## 2. 使用方法
+
+## 快速开始
 
 ### 模型下载
 克隆本仓库默认不会下载模型，需要利用 git-lfs 下载模型。首先下载 GitLFS
@@ -104,7 +87,7 @@ bash convert.sh
 |:-                               |:-                                                                                                    |:-                  |:-                  |
 |mobilenetv2                          |[vision/classification/mobilenetv2](vision/classification/mobilenetv2)                            |                    |                    |
 |resnet50_v2                          |[vision/classification/resnet50_v2](vision/classification/resnet50_v2)                            |                    |                    |
-|squeezenet_v1.1_cf_cvs20             |[vision/classification/squeezenet_v1.1_cf_cvs20](vision/classification/squeezenet_v1.1_cf_cvs20)  |                    |                    |
+|squeezenet_v1.1             |[vision/classification/squeezenet_v1.1](vision/classification/squeezenet_v1.1)  |                    |                    |
 |yolov5s                              |[vision/classification/yolov5s](vision/classification/yolov5s)                                    |                    |                    |
 
 
@@ -118,12 +101,13 @@ SGTPU-ModelZoo/
 └── README.md               # 项目说明文档
 ```
 
-## 常见问题
-...
+## 资料链接
 
-## 贡献指南
-...
+* TPU-MLIR快速入门手册：https://tpumlir.org/docs/quick_start/index.html
+* TPU-MLIR论文、整体工程讲解：https://www.bilibili.com/video/BV1My4y1o73Q
 
 ## 许可证
+
+本项目采用 [2-Clause BSD License](LICENSE) 许可协议。有关详细信息，请参阅 LICENSE 文件。
 
 
