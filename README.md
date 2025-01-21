@@ -83,21 +83,18 @@ bash convert.sh
 
 
 ### 模型导航
-|Model                            |Path                                                                                                  |NNTC                |MLIR                |
-|:-                               |:-                                                                                                    |:-                  |:-                  |
-|mobilenetv2                          |[vision/classification/mobilenetv2](vision/classification/mobilenetv2)                            |                    |                    |
-|resnet50_v2                          |[vision/classification/resnet50_v2](vision/classification/resnet50_v2)                            |                    |                    |
-|squeezenet_v1.1             |[vision/classification/squeezenet_v1.1](vision/classification/squeezenet_v1.1)  |                    |                    |
-|yolov5s                              |[vision/classification/yolov5s](vision/classification/yolov5s)                                    |                    |                    |
+|Model                            |Path                                                                                                  |
+|:-                               |:-                                                                                                                |
+|mobilenetv2                          |[vision/classification/mobilenetv2](vision/classification/mobilenetv2)                                             |
+|resnet50_v2                          |[vision/classification/resnet50_v2](vision/classification/resnet50_v2)                                             |
+|squeezenet_v1.1             |[vision/classification/squeezenet_v1.1](vision/classification/squeezenet_v1.1)  |                        
+|yolov5s                              |[vision/classification/yolov5s](vision/classification/yolov5s)                                               |
 
 
 ## 目录结构
 ```
 SGTPU-ModelZoo/
 ├── vision/                 # 模型
-├── dataset/                # 数据集
-├── language/               #
-├── scripts                 #
 └── README.md               # 项目说明文档
 ```
 
